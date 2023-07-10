@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E942C8FB2A5BFB5200BF594E /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E942C8FA2A5BFB5200BF594E /* FeedView.swift */; };
+		E942C8FD2A5BFB6600BF594E /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E942C8FC2A5BFB6600BF594E /* FeedCell.swift */; };
 		E9712E2B2A5B2DFB00A25BA5 /* InstagramCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9712E2A2A5B2DFB00A25BA5 /* InstagramCloneApp.swift */; };
 		E9712E2D2A5B2DFB00A25BA5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9712E2C2A5B2DFB00A25BA5 /* ContentView.swift */; };
 		E9712E2F2A5B2DFC00A25BA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9712E2E2A5B2DFC00A25BA5 /* Assets.xcassets */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E942C8FA2A5BFB5200BF594E /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		E942C8FC2A5BFB6600BF594E /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		E9712E272A5B2DFB00A25BA5 /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9712E2A2A5B2DFB00A25BA5 /* InstagramCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramCloneApp.swift; sourceTree = "<group>"; };
 		E9712E2C2A5B2DFB00A25BA5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -131,6 +135,8 @@
 		E9712E3E2A5B301F00A25BA5 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				E942C8FA2A5BFB5200BF594E /* FeedView.swift */,
+				E942C8FC2A5BFB6600BF594E /* FeedCell.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -250,10 +256,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E942C8FD2A5BFB6600BF594E /* FeedCell.swift in Sources */,
 				E9712E472A5B333C00A25BA5 /* ProfileView.swift in Sources */,
 				E9712E2D2A5B2DFB00A25BA5 /* ContentView.swift in Sources */,
 				E9712E2B2A5B2DFB00A25BA5 /* InstagramCloneApp.swift in Sources */,
 				E9712E4A2A5B40EC00A25BA5 /* UserStatView.swift in Sources */,
+				E942C8FB2A5BFB5200BF594E /* FeedView.swift in Sources */,
 				E9712E452A5B312100A25BA5 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
