@@ -17,6 +17,7 @@
 		E9712E452A5B312100A25BA5 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9712E442A5B312100A25BA5 /* MainTabView.swift */; };
 		E9712E472A5B333C00A25BA5 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9712E462A5B333C00A25BA5 /* ProfileView.swift */; };
 		E9712E4A2A5B40EC00A25BA5 /* UserStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9712E492A5B40EC00A25BA5 /* UserStatView.swift */; };
+		E97A57D42A5C2F9700C8EE37 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97A57D32A5C2F9700C8EE37 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		E9712E442A5B312100A25BA5 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		E9712E462A5B333C00A25BA5 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		E9712E492A5B40EC00A25BA5 /* UserStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatView.swift; sourceTree = "<group>"; };
+		E97A57D32A5C2F9700C8EE37 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 		E9712E3D2A5B2FFB00A25BA5 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				E97A57D32A5C2F9700C8EE37 /* LoginView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				E942C8FD2A5BFB6600BF594E /* FeedCell.swift in Sources */,
 				E9712E472A5B333C00A25BA5 /* ProfileView.swift in Sources */,
 				E9712E2D2A5B2DFB00A25BA5 /* ContentView.swift in Sources */,
+				E97A57D42A5C2F9700C8EE37 /* LoginView.swift in Sources */,
 				E9712E2B2A5B2DFB00A25BA5 /* InstagramCloneApp.swift in Sources */,
 				E942C8FF2A5C1C2B00BF594E /* SearchView.swift in Sources */,
 				E9712E4A2A5B40EC00A25BA5 /* UserStatView.swift in Sources */,
