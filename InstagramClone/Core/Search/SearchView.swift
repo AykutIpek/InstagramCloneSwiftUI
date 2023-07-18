@@ -32,7 +32,7 @@ struct SearchView: View {
                                 .font(.footnote)
                                 Spacer()
                             }
-                            .foregroundColor(.black)
+                            .foregroundColor(Color.primary)
                         })
                         .padding(.horizontal)
                     }

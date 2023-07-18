@@ -31,7 +31,7 @@ struct MainTabView: View {
                     Image(systemName: "person")
                 }
         }
-        .tint(.black)
+        .tint(Color.primary)
     }
 }
 

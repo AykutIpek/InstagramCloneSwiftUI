@@ -58,7 +58,7 @@ struct CurrentUserProfileView: View {
                             .font(.subheadline)
                             .fontWeight(.semibold)
                             .frame(width: 360, height: 32)
-                            .foregroundColor(.black)
+                            .foregroundColor(Color.primary)
                             .overlay(RoundedRectangle(cornerRadius: 6).stroke(Color.gray, lineWidth: 1))
                     }
 
