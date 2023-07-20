@@ -34,7 +34,9 @@ extension AuthService: IAuthService{
     }
     
     func createUser(email: String, password: String, username: String) async throws {
-        
+        print("Email is \(email)")
+        print("Username is \(username)")
+        print("Password is \(password)")
     }
     
     func loadUserData() async throws {
