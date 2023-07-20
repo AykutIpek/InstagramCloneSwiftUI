@@ -34,9 +34,16 @@ extension AuthService: IAuthService{
     }
     
     func createUser(email: String, password: String, username: String) async throws {
-        print("Email is \(email)")
-        print("Username is \(username)")
-        print("Password is \(password)")
+        do {
+            let result = try await Auth.auth().createUser(withEmail: email, password: password)
+            self.userSession = result.user
+        } catch {
+            print("DEBUG: Failed to register user with error \(error.localizedDescription)")
+        }
+        
+        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+            
+        }
     }
     
     func loadUserData() async throws {

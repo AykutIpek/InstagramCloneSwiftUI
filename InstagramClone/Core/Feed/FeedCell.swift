@@ -80,7 +80,7 @@ struct FeedCell: View {
             .padding(.horizontal, 10)
             .padding(.top, 1)
             
-            Text("\(post.timeStamp)h ego")
+            Text("2h ego")
                 .font(.footnote)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal, 10)
