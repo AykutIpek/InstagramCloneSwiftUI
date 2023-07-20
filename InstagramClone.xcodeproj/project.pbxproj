@@ -21,6 +21,8 @@
 		E96044D72A69309200E1B9B9 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = E96044D62A69309200E1B9B9 /* FirebaseStorage */; };
 		E96044DB2A6935BA00E1B9B9 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96044DA2A6935BA00E1B9B9 /* AuthService.swift */; };
 		E96044DF2A69388300E1B9B9 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96044DE2A69388300E1B9B9 /* ContentViewModel.swift */; };
+		E96044E22A6943F100E1B9B9 /* RegisterationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96044E12A6943F100E1B9B9 /* RegisterationViewModel.swift */; };
+		E96044E42A69561600E1B9B9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96044E32A69561600E1B9B9 /* LoginViewModel.swift */; };
 		E9712E2B2A5B2DFB00A25BA5 /* InstagramCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9712E2A2A5B2DFB00A25BA5 /* InstagramCloneApp.swift */; };
 		E9712E2D2A5B2DFB00A25BA5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9712E2C2A5B2DFB00A25BA5 /* ContentView.swift */; };
 		E9712E2F2A5B2DFC00A25BA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9712E2E2A5B2DFC00A25BA5 /* Assets.xcassets */; };
@@ -50,6 +52,8 @@
 		E96044CD2A69300000E1B9B9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E96044DA2A6935BA00E1B9B9 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		E96044DE2A69388300E1B9B9 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		E96044E12A6943F100E1B9B9 /* RegisterationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterationViewModel.swift; sourceTree = "<group>"; };
+		E96044E32A69561600E1B9B9 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		E9712E272A5B2DFB00A25BA5 /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9712E2A2A5B2DFB00A25BA5 /* InstagramCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramCloneApp.swift; sourceTree = "<group>"; };
 		E9712E2C2A5B2DFB00A25BA5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -116,6 +120,15 @@
 			isa = PBXGroup;
 			children = (
 				E96044DE2A69388300E1B9B9 /* ContentViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E96044E02A6943BE00E1B9B9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E96044E12A6943F100E1B9B9 /* RegisterationViewModel.swift */,
+				E96044E32A69561600E1B9B9 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -208,8 +221,9 @@
 		E9712E3D2A5B2FFB00A25BA5 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				E96044D92A69359E00E1B9B9 /* Service */,
 				E96044D82A69356D00E1B9B9 /* View */,
+				E96044E02A6943BE00E1B9B9 /* ViewModel */,
+				E96044D92A69359E00E1B9B9 /* Service */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -360,6 +374,7 @@
 				E942C8FD2A5BFB6600BF594E /* FeedCell.swift in Sources */,
 				E98CFE2F2A67CE5B00FEE6A0 /* UploadPostView.swift in Sources */,
 				E9712E472A5B333C00A25BA5 /* ProfileView.swift in Sources */,
+				E96044E22A6943F100E1B9B9 /* RegisterationViewModel.swift in Sources */,
 				E9712E2D2A5B2DFB00A25BA5 /* ContentView.swift in Sources */,
 				E97A57D42A5C2F9700C8EE37 /* LoginView.swift in Sources */,
 				E96044DB2A6935BA00E1B9B9 /* AuthService.swift in Sources */,
@@ -369,6 +384,7 @@
 				E97A57D62A5C411400C8EE37 /* AddEmailView.swift in Sources */,
 				E9483BD72A670E4D00874BE6 /* PostGridView.swift in Sources */,
 				E97A57DA2A5C48C700C8EE37 /* CreateUsernameView.swift in Sources */,
+				E96044E42A69561600E1B9B9 /* LoginViewModel.swift in Sources */,
 				E96044DF2A69388300E1B9B9 /* ContentViewModel.swift in Sources */,
 				E98CFE312A67D9B200FEE6A0 /* UploadPostViewModel.swift in Sources */,
 				E98CFE2B2A67C46E00FEE6A0 /* ProfileHeaderView.swift in Sources */,
