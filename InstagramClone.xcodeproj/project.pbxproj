@@ -32,6 +32,8 @@
 		E9712E4A2A5B40EC00A25BA5 /* UserStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9712E492A5B40EC00A25BA5 /* UserStatView.swift */; };
 		E977A8392A6A8B2D00B1F6CE /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E977A8382A6A8B2D00B1F6CE /* UserService.swift */; };
 		E977A83D2A6A8C7600B1F6CE /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E977A83C2A6A8C7600B1F6CE /* SearchViewModel.swift */; };
+		E977A83F2A6AA86600B1F6CE /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E977A83E2A6AA86600B1F6CE /* EditProfileView.swift */; };
+		E977A8432A6AB93000B1F6CE /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E977A8422A6AB93000B1F6CE /* EditProfileViewModel.swift */; };
 		E97A57D42A5C2F9700C8EE37 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97A57D32A5C2F9700C8EE37 /* LoginView.swift */; };
 		E97A57D62A5C411400C8EE37 /* AddEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97A57D52A5C411400C8EE37 /* AddEmailView.swift */; };
 		E97A57D82A5C472000C8EE37 /* IGTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97A57D72A5C472000C8EE37 /* IGTextFieldModifier.swift */; };
@@ -66,6 +68,8 @@
 		E9712E492A5B40EC00A25BA5 /* UserStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatView.swift; sourceTree = "<group>"; };
 		E977A8382A6A8B2D00B1F6CE /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		E977A83C2A6A8C7600B1F6CE /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		E977A83E2A6AA86600B1F6CE /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		E977A8422A6AB93000B1F6CE /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 		E97A57D32A5C2F9700C8EE37 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E97A57D52A5C411400C8EE37 /* AddEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmailView.swift; sourceTree = "<group>"; };
 		E97A57D72A5C472000C8EE37 /* IGTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGTextFieldModifier.swift; sourceTree = "<group>"; };
@@ -245,9 +249,8 @@
 		E9712E3F2A5B302300A25BA5 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				E9712E462A5B333C00A25BA5 /* ProfileView.swift */,
-				E933F86C2A66CD7D00EED1C4 /* CurrentUserProfileView.swift */,
-				E98CFE2A2A67C46E00FEE6A0 /* ProfileHeaderView.swift */,
+				E977A8412A6AB53000B1F6CE /* View */,
+				E977A8402A6AB52B00B1F6CE /* ViewModel */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -309,6 +312,25 @@
 			isa = PBXGroup;
 			children = (
 				E942C8FE2A5C1C2B00BF594E /* SearchView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E977A8402A6AB52B00B1F6CE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E977A8422A6AB93000B1F6CE /* EditProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E977A8412A6AB53000B1F6CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E9712E462A5B333C00A25BA5 /* ProfileView.swift */,
+				E933F86C2A66CD7D00EED1C4 /* CurrentUserProfileView.swift */,
+				E98CFE2A2A67C46E00FEE6A0 /* ProfileHeaderView.swift */,
+				E977A83E2A6AA86600B1F6CE /* EditProfileView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -398,6 +420,7 @@
 				E9712E472A5B333C00A25BA5 /* ProfileView.swift in Sources */,
 				E96044E22A6943F100E1B9B9 /* RegisterationViewModel.swift in Sources */,
 				E9712E2D2A5B2DFB00A25BA5 /* ContentView.swift in Sources */,
+				E977A8432A6AB93000B1F6CE /* EditProfileViewModel.swift in Sources */,
 				E97A57D42A5C2F9700C8EE37 /* LoginView.swift in Sources */,
 				E977A8392A6A8B2D00B1F6CE /* UserService.swift in Sources */,
 				E96044DB2A6935BA00E1B9B9 /* AuthService.swift in Sources */,
@@ -407,6 +430,7 @@
 				E97A57D62A5C411400C8EE37 /* AddEmailView.swift in Sources */,
 				E9483BD72A670E4D00874BE6 /* PostGridView.swift in Sources */,
 				E97A57DA2A5C48C700C8EE37 /* CreateUsernameView.swift in Sources */,
+				E977A83F2A6AA86600B1F6CE /* EditProfileView.swift in Sources */,
 				E96044E42A69561600E1B9B9 /* LoginViewModel.swift in Sources */,
 				E96044DF2A69388300E1B9B9 /* ContentViewModel.swift in Sources */,
 				E98CFE312A67D9B200FEE6A0 /* UploadPostViewModel.swift in Sources */,
