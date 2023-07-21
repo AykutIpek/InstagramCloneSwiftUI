@@ -10,6 +10,7 @@ import SwiftUI
 struct ProfileHeaderView: View {
     //MARK: - Properties
     let user: User
+    @State private var showEditProfile = false
     
     var body: some View {
         VStack(spacing: 10) {
@@ -51,17 +52,29 @@ struct ProfileHeaderView: View {
             
             // Action Button
             Button {
-                //
+                if user.isCurrentUser {
+                    showEditProfile.toggle()
+                }else{
+                    print("Follow user...")
+                }
             } label: {
-                Text("Edit Profile")
+                Text(user.isCurrentUser ? "Edit Profile" : "Follow")
                     .font(.subheadline)
                     .fontWeight(.semibold)
                     .frame(width: 360, height: 32)
-                    .foregroundColor(Color.primary)
-                    .overlay(RoundedRectangle(cornerRadius: 6).stroke(Color.gray, lineWidth: 1))
+                    .background(user.isCurrentUser ? Color.clear : Color(.systemBlue))
+                    .foregroundColor(user.isCurrentUser ? Color.primary : .white)
+                    .cornerRadius(6)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 6)
+                            .stroke(user.isCurrentUser ? .gray : .clear, lineWidth: 1)
+                    )
             }
             
             Divider()
+        }
+        .fullScreenCover(isPresented: $showEditProfile) {
+            Text("Edit profile View")
         }
     }
 }
