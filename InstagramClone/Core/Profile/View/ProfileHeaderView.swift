@@ -17,11 +17,7 @@ struct ProfileHeaderView: View {
             
             // Picture and Stats
             HStack{
-                Image(user.profileImageUrl ?? "")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 80, height: 80)
-                    .clipShape(Circle())
+                CirclerProfileImageView(user: user, size: .large)
                 Spacer()
                 HStack(spacing: 8) {
                     UserStatView(value: 12, title: "Posts")
