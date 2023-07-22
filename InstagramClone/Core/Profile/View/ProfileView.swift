@@ -9,16 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     //MARK: - Properties
-    var posts: [Post]{
-        return Post.MOCK_POSTS.filter({ $0.user?.fullName == user.fullName})
-    }
     let user: User
-    private let gridItems: [GridItem] = [
-        .init(.flexible(), spacing: 1),
-        .init(.flexible(), spacing: 1),
-        .init(.flexible(), spacing: 1)
-    ]
-    private let imageDimension: CGFloat = (UIScreen.main.bounds.width / 3) - 1
     
     //MARK: - Body
     var body: some View {
@@ -26,7 +17,7 @@ struct ProfileView: View {
             // Header
             ProfileHeaderView(user: user)
             // Post Grid View
-            PostGridView(posts: posts)
+            PostGridView(user: user)
         }
         .navigationTitle("Profile")
         .navigationBarTitleDisplayMode(.inline)
