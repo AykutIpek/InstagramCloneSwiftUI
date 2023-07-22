@@ -11,10 +11,6 @@ struct CurrentUserProfileView: View {
     
     let user: User
     
-    var posts: [Post]{
-        return Post.MOCK_POSTS.filter({ $0.user?.fullName == user.username})
-    }
-    
     private let gridItems: [GridItem] = [
         .init(.flexible(), spacing: 1),
         .init(.flexible(), spacing: 1),
@@ -27,7 +23,7 @@ struct CurrentUserProfileView: View {
                 // Header
                 ProfileHeaderView(user: user)
                 // Post Grid View
-                PostGridView(posts: posts)
+                PostGridView(user: user)
             }
             .navigationTitle("Profile")
             .navigationBarTitleDisplayMode(.inline)
