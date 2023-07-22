@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E91FD1152A6BEEDE00651FB1 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91FD1142A6BEEDE00651FB1 /* ImageUploader.swift */; };
 		E9281F362A65514B00BED3A3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9281F352A65514B00BED3A3 /* User.swift */; };
 		E933F86D2A66CD7D00EED1C4 /* CurrentUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E933F86C2A66CD7D00EED1C4 /* CurrentUserProfileView.swift */; };
 		E942C8FB2A5BFB5200BF594E /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E942C8FA2A5BFB5200BF594E /* FeedView.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E91FD1142A6BEEDE00651FB1 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		E9281F352A65514B00BED3A3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E933F86C2A66CD7D00EED1C4 /* CurrentUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileView.swift; sourceTree = "<group>"; };
 		E942C8FA2A5BFB5200BF594E /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				E977A8382A6A8B2D00B1F6CE /* UserService.swift */,
+				E91FD1142A6BEEDE00651FB1 /* ImageUploader.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				E97A57DA2A5C48C700C8EE37 /* CreateUsernameView.swift in Sources */,
 				E977A83F2A6AA86600B1F6CE /* EditProfileView.swift in Sources */,
 				E96044E42A69561600E1B9B9 /* LoginViewModel.swift in Sources */,
+				E91FD1152A6BEEDE00651FB1 /* ImageUploader.swift in Sources */,
 				E96044DF2A69388300E1B9B9 /* ContentViewModel.swift in Sources */,
 				E98CFE312A67D9B200FEE6A0 /* UploadPostViewModel.swift in Sources */,
 				E98CFE2B2A67C46E00FEE6A0 /* ProfileHeaderView.swift in Sources */,

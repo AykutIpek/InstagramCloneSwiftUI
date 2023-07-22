@@ -9,6 +9,12 @@ import PhotosUI
 import Firebase
 import SwiftUI
 
+enum UpdateUserDataEnum: String {
+    case profileImageUrl = "profileImageUrl"
+    case fullName = "fullName"
+    case bio = "bio"
+}
+
 @MainActor
 final class EditProfileViewModel: ObservableObject {
     //MARK: - Properties
@@ -19,6 +25,7 @@ final class EditProfileViewModel: ObservableObject {
     @Published var profileImage: Image?
     @Published var fullName = ""
     @Published var bio = ""
+    private var uiImage: UIImage?
     
     //MARK: - Life Cycle
     init(user: User) {
@@ -34,7 +41,7 @@ extension EditProfileViewModel{
         guard let data = try? await item.loadTransferable(type: Data.self) else { return }
         
         guard let uiImage = UIImage(data: data) else { return }
-        
+        self.uiImage = uiImage
         self.profileImage = Image(uiImage: uiImage)
     }
     
@@ -42,13 +49,18 @@ extension EditProfileViewModel{
         // Update profile image if changed
         var data = [String: Any]()
         
+        if let uiImage = uiImage{
+            let imageUrl = try? await ImageUploader.uploadImage(image: uiImage)
+            data[UpdateUserDataEnum.profileImageUrl.rawValue] = imageUrl
+        }
+        
         // update name if changed
         if !fullName.isEmpty && user.fullName != fullName {
-            data["fullName"] = fullName
+            data[UpdateUserDataEnum.fullName.rawValue] = fullName
         }
         // Update bio if changed
         if !bio.isEmpty && user.bio != bio {
-            data["bio"] = bio
+            data[UpdateUserDataEnum.bio.rawValue] = bio
         }
         
         if !data.isEmpty {
