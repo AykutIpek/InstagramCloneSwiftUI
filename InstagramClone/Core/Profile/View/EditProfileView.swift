@@ -10,10 +10,11 @@ import PhotosUI
 
 struct EditProfileView: View {
     @Environment(\.dismiss) var dismiss
-    @State private var selectedImage: PhotosPickerItem?
-    @State private var fullname = ""
-    @State private var bio = ""
-    @StateObject var viewModel = EditProfileViewModel()
+    @StateObject var viewModel: EditProfileViewModel
+    
+    init(user: User){
+        self._viewModel = StateObject(wrappedValue: EditProfileViewModel(user: user))
+    }
     
     var body: some View {
         VStack{
@@ -33,7 +34,8 @@ struct EditProfileView: View {
                     Spacer()
                     
                     Button {
-                        print("Update profile info")
+                        Task { try await viewModel.updateUserData() }
+                        dismiss()
                     } label: {
                         Text("Done")
                             .font(.subheadline)
@@ -58,12 +60,7 @@ struct EditProfileView: View {
                             .background(.gray)
                         .clipShape(Circle())
                     }else{
-                        Image(systemName: "person")
-                            .resizable()
-                            .frame(width: 80, height: 80)
-                            .foregroundColor(.white)
-                            .background(.gray)
-                        .clipShape(Circle())
+                        CirclerProfileImageView(user: viewModel.user, size: .large)
                     }
                     Text("Edit Profile Picture")
                         .font(.footnote)
@@ -89,7 +86,7 @@ struct EditProfileView: View {
 
 struct EditProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        EditProfileView()
+        EditProfileView(user: User.MOCK_USERS[0])
     }
 }
 
