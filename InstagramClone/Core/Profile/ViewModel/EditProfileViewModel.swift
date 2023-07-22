@@ -12,6 +12,7 @@ import SwiftUI
 @MainActor
 final class EditProfileViewModel: ObservableObject {
     //MARK: - Properties
+    @Published var user: User
     @Published var selectedImage: PhotosPickerItem? {
         didSet { Task {await loadImage(fromItem: selectedImage)} }
     }
@@ -19,7 +20,10 @@ final class EditProfileViewModel: ObservableObject {
     @Published var fullName = ""
     @Published var bio = ""
     
-
+    //MARK: - Life Cycle
+    init(user: User) {
+        self.user = user
+    }
 }
 
 //MARK: - Functions
@@ -32,5 +36,23 @@ extension EditProfileViewModel{
         guard let uiImage = UIImage(data: data) else { return }
         
         self.profileImage = Image(uiImage: uiImage)
+    }
+    
+    func updateUserData() async throws {
+        // Update profile image if changed
+        var data = [String: Any]()
+        
+        // update name if changed
+        if !fullName.isEmpty && user.fullName != fullName {
+            data["fullName"] = fullName
+        }
+        // Update bio if changed
+        if !bio.isEmpty && user.bio != bio {
+            data["bio"] = bio
+        }
+        
+        if !data.isEmpty {
+            try await Firestore.firestore().collection("users").document(user.id).updateData(data)
+        }
     }
 }
