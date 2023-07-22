@@ -102,6 +102,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E95BF33D2A6C271000D8C3AD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E98CFE302A67D9B200FEE6A0 /* UploadPostViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E95BF33E2A6C271700D8C3AD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E98CFE2E2A67CE5B00FEE6A0 /* UploadPostView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E96044D82A69356D00E1B9B9 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,8 +299,8 @@
 		E9712E422A5B306600A25BA5 /* UploadPost */ = {
 			isa = PBXGroup;
 			children = (
-				E98CFE2E2A67CE5B00FEE6A0 /* UploadPostView.swift */,
-				E98CFE302A67D9B200FEE6A0 /* UploadPostViewModel.swift */,
+				E95BF33E2A6C271700D8C3AD /* View */,
+				E95BF33D2A6C271000D8C3AD /* ViewModel */,
 			);
 			path = UploadPost;
 			sourceTree = "<group>";
